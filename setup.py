@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     # noinspection SpellCheckingInspection
     setup(
         name="superorm",
-        version="1.0.0",
+        version="1.0.1",
         description=(
             "General query tool class of relational database."
         ),

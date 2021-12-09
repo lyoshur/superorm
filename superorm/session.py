@@ -23,9 +23,7 @@ class SessionManager:
         """
         _ident = threading.currentThread().ident
         if _ident in self._cache:
-            print("线程", _ident, "使用session缓存")
             return self._cache[_ident]
-        print("线程", _ident, "创建新session")
         _session = Session(self._conn_pool, self._conn_pool.obtain(), self)
         self._cache[_ident] = _session
         return self._cache[_ident]
@@ -36,7 +34,6 @@ class SessionManager:
         """
         _ident = threading.currentThread().ident
         if _ident in self._cache:
-            print("线程", _ident, "销毁session")
             del self._cache[_ident]
 
 
