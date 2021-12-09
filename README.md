@@ -1,2 +1,2 @@
 # superorm
-tabledbmapper的升级版，从底层直接支持多线程
+An upgraded version of tabledbmapper that directly supports multithreaded from the bottom
