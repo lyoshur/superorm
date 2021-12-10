@@ -72,6 +72,9 @@ class ConnPool:
                 # set use flag
                 index = self._flags[0]
                 self._flags = self._flags[1:]
+                # test the conn
+                self._conn_handle.ping(self._conns[index])
+                # end test conn
                 self._lock.release()
                 return index
 
